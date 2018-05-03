@@ -13,6 +13,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
 Plugin 'Yggdroot/indentLine'
 Plugin 'rodjek/vim-puppet'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'pangloss/vim-javascript'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -80,3 +82,7 @@ set backspace=indent,eol,start
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 nmap <Space>x :let @/=''<CR>
+
+" Use ini syntax highlighting
+:autocmd BufRead,BufNewFile logging.conf setf dosini
+vnoremap <C-c> "*y
